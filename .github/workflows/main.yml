@@ -15,5 +15,3 @@ jobs:
         with:
           min_total_comments: 10
           reacted_comment_count: 3
-      - name: Get the output
-        run: echo "Outputs from the previous steps ${{ steps.pythontest.outputs }}"
