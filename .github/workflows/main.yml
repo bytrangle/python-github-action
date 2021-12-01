@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - uses: actions/checkout@master # use the master branch so that
+      # I don't have to remember the release version
+      - name: Test Python script
+        id: pythontest
+        uses: bytrangle/python-github-action@v1.0
+        with:
+          min-total-comments: 10
+          reacted-comment-count: 3
+      - name: Get the output
+        run: echo "Outputs from the previous steps ${{ steps.pythontest.outputs }}"
