@@ -7,8 +7,9 @@ ADD . /app
 
 WORKDIR /app
 
-RUN pip install --target=/app requirements.txt
-# Install required dependencies into the app source dir.
+RUN pip install -r --target=/app requirements.txt
+# Install required dependencies listed in requirements.txt
+# into the app source dir.
 
 FROM gcr.io/distroless/python3-debian10
 # Initialize a new build stage and set distroless container image
