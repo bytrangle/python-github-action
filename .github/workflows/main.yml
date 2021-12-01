@@ -9,7 +9,7 @@ jobs:
       # I don't have to remember the release version
       - name: Test Python script
         id: pythontest
-        uses: bytrangle/python-github-action@v1.0
+        uses: bytrangle/python-github-action@master
         with:
           min-total-comments: 10
           reacted-comment-count: 3
