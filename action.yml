@@ -2,11 +2,11 @@ name: "Display most reacted comments"
 description: "Update most reacted comments in the issue's opening post to help manage long-winded issue"
 author: "Trang Le"
 inputs:
-  min-total-comments:
+  min_total_comments:
     description: "The total number of comments an issue needs to have to run this action"
     required: false
     defaults: 20
-  reacted-comment-count:
+  reacted_comment_count:
     description: "The number of reacted comments to display in the issue's opening post"
     required: false
     defaults: 5
