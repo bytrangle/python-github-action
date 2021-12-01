@@ -1,4 +1,6 @@
-on: [push]
+on:
+  issue_comment:
+    types: [created, deleted]
 
 jobs:
   hello_world_job:
