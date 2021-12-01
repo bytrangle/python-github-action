@@ -8,4 +8,4 @@ filePath = getenv('GITHUB_EVENT_PATH', '/github/workflows/event.json')
 # print(f.read())
 with open(filePath) as f:
   data = json.load(f)
-print(data["issue"])
+print(data["issue"]["html_url"])
