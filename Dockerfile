@@ -7,7 +7,7 @@ ADD . /app
 
 WORKDIR /app
 
-RUN pip install -r --target=/app requirements.txt
+RUN pip install -r --target=/app ../requirements.txt
 # Install required dependencies listed in requirements.txt
 # into the app source dir.
 
