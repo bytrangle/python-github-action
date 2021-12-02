@@ -19,6 +19,8 @@ FROM python:3-slim AS builder
 RUN useradd --create-home appuser
 WORKDIR /home/appuser
 USER appuser
+ENV PATH="/home/appuser/.local/bin:${PATH}" # Add this new directory
+# to PATH
 COPY --chown=appuser:appuser requirements.txt requirements.txt
 RUN pip --disable-pip-version-check install -r requirements.txt
 # Install required dependencies listed in requirements.txt
@@ -35,7 +37,6 @@ FROM gcr.io/distroless/python3-debian10
 # WORKDIR /app
 
 # ENV PYTHONPATH /app
-# ENV PATH="/home/appuser/.local/bin:${PATH}"
 COPY . .
 
 # CMD ["/app/main.py"]
