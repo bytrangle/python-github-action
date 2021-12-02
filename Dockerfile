@@ -21,7 +21,7 @@ WORKDIR /home/appuser
 USER appuser
 ENV PATH="/home/appuser/.local/bin:${PATH}" 
 # Add this new directory to PATH
-COPY requirements.txt requirements.txt
+COPY requirements.txt .
 RUN pip --disable-pip-version-check install -r requirements.txt
 # Install required dependencies listed in requirements.txt
 # into the app source dir.
