@@ -10,6 +10,10 @@ inputs:
     description: "The number of reacted comments to display in the issue's opening post"
     required: false
     defaults: 5
+  token:
+    description: Github token
+    required: false
+    defaults: ${{ secrets.GITHUB_TOKEN}}
 runs:
   using: "docker"
   image: "Dockerfile"
