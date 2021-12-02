@@ -1,11 +1,17 @@
 FROM python:3-slim AS builder
 # use the minimal packages needed to run Python
 
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
 ADD . /app
 # Copy new files, directories from <src> and adds them to the
 # filesystem of the image at the past <dest>
 
 WORKDIR /app
+# Set the working directory for any subsequent RUN, CMD, ENTRYPOINT,
+# COPY and ADD instructions
 
 COPY requirements.txt requirements.txt
 # Copy the requirements.txt into our working directory /app
