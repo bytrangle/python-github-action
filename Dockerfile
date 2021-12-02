@@ -16,7 +16,7 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 # Copy the requirements.txt into our working directory /app
 
-RUN pip install -r requirements.txt
+RUN pip --disable-pip-version-check install -r requirements.txt
 # Install required dependencies listed in requirements.txt
 # into the app source dir.
 
