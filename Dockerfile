@@ -39,5 +39,5 @@ ENV PATH="/home/appuser/.local/bin:${PATH}"
 COPY --chown=appuser:appuser . .
 
 # CMD ["/app/main.py"]
-CMD["main.py"]
+CMD ["main.py"]
 # Provide defaults for an executing container.
