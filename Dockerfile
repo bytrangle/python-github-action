@@ -37,7 +37,7 @@ FROM gcr.io/distroless/python3-debian10
 # WORKDIR /app
 
 # ENV PYTHONPATH /app
-COPY . .
+COPY --chown=appuser:appuser . .
 
 # CMD ["/app/main.py"]
 CMD ["main.py"]
