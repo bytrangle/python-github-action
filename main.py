@@ -10,6 +10,6 @@ with open(filePath) as f:
   data = json.load(f)
 print(data["issue"]["html_url"])
 
-token = getenv('GITHUB_TOKEN')
+token = getenv('INPUT_REPO_TOKEN')
 if token is not None:
   print('github token is available')
